@@ -1,0 +1,18 @@
+<header style="height:360px; background:url(assets/img/short-film.jpg)">
+	
+	<div class="row featured-movie-info">
+		<div class="medium-5 column">
+			{{#each single-movie}}
+			<h5 class="movie-year">{{year}}</h5>
+			<h3 class="movie-title">{{title}}</h3>
+			<p class="movie-desc">{{description}}</p>
+			{{#each genre}}
+			<span class="movie-genre">{{this}}</span>									
+			{{/each}}
+			<span class="movie-lang">{{language}}</span>
+			<a href="#" class="hollow button" title="Play Trailer">play trailer</a>
+			{{/each}}
+		</div>
+	</div>			
+	
+</header><!-- /header -->

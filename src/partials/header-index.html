@@ -1,0 +1,30 @@
+<div class="orbit" aria-label="Featured Movies Slider" data-orbit data-options="autoPlay:false">
+	<ul class="orbit-container">
+		{{#each featured-movies}}
+		<li class="is-active orbit-slide">
+			<img class="orbit-image" src={{link}} alt={{this.title}}>
+			<div class="row featured-movie-info collapse mobile-wrap">
+				<div class="featured-movie-info-wrap medium-6 large-5 column">
+					<h6 class="movie-year">{{year}}</h6>
+					<h3 class="movie-title">{{title}}</h3>
+					<p class="movie-desc show-for-medium">{{description}}</p>
+					<div class="movie-genre-block show-for-medium">
+					{{#each genre}}
+						<span class="box movie-genre">{{this}}</span>									
+					{{/each}}						
+					</div>
+					<span class="box movie-lang">{{language}}</span>
+					<a href="#" class="box" title="Play Trailer">play trailer</a>
+				</div>
+			</div>			
+		</li>
+		{{/each}}	
+	</ul>
+	<nav class="orbit-bullets">
+		{{#each featured-movies}}
+		<button class="is-active" data-slide=0>
+			<span class="show-for-sr">{{title}}</span>
+		</button>
+		{{/each}}
+	</nav>
+</div>

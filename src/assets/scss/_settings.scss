@@ -45,9 +45,11 @@
 // 1. Global
 // ---------
 
-$global-font-size: 100%;
+$global-font-size: 90%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
+$global-innerwrap: 40px 0; 
+$section-padding:100px;
 $foundation-palette: (
   primary: #2199e8,
   secondary: #777,
@@ -60,9 +62,15 @@ $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
-$body-background: $white;
+$purple: #2a273a;
+$site-color: #FFEB3B;
+$section-alt-color: #f4f4f4;
+$dark-transparent: rgba(0, 0, 0, 0.1);
+$white-transparent: rgba(255,255,255,0.5);
+$body-background: $purple;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'Montserrat', Roboto, Arial, sans-serif;
+$paragraph-font-family: 'Open Sans', sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -139,7 +147,7 @@ $code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
-$anchor-color: $primary-color;
+$anchor-color: $white;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
@@ -534,7 +542,7 @@ $thumbnail-radius: $global-radius;
 // 34. Title Bar
 // -------------
 
-$titlebar-background: $black;
+$titlebar-background: $dark-transparent;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
@@ -558,9 +566,13 @@ $tooltip-radius: $global-radius;
 // 36. Top Bar
 // -----------
 
-$topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
-$topbar-submenu-background: $topbar-background;
+// $topbar-padding: 0.5rem;
+$topbar-hpadding: 40px;
+$topbar-vpadding: 20px;
+$topbar-background: $dark-transparent;
+$topbar-submenu-background: $dark-gray;
 $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;
+$topbar-menu-padding: 31px;
 $topbar-unstack-breakpoint: medium;
+$topbar-border: 1px solid $white-transparent;

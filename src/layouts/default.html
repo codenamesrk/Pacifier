@@ -2,18 +2,28 @@
 
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation for Sites</title>
-    <link rel="stylesheet" href="{{root}}assets/css/app.css">
-  </head>
-  <body>
+    <link rel="stylesheet" href="{{root}}assets/css/style.css">
+</head>
+<body>
+	<div class="wrap">
+	 	<div class="off-canvas-wrapper">
+	 		<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+	 			<div class="off-canvas position-left" id="offCanvas" data-off-canvas>
+	 				{{> mobile-navigation}}
+	 			</div>
 
-    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
-    {{> body}}
-
-    <script src="{{root}}assets/js/app.js"></script>
-  </body>
+	 			<div class="body off-canvas-content" data-off-canvas-content>
+				    {{> header}}
+				    {{> body}}
+				    {{> footer}}	
+	 			</div>
+	 		</div>
+	 	</div>	
+	</div>    
+</body>
 </html>

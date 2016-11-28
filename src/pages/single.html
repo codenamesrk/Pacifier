@@ -1,0 +1,81 @@
+---
+title: Single
+---
+{{> header}}
+<section class="film-synopsis-block">
+    <div class="section-meta text-center">
+        <h5>Section</h5>
+    </div>
+    <div class="film-synopsis text-center medium-text-justify">        
+        <p>Lorem ipusm Partials are a feature of Handlebars which allow you to inject HTML anywhere in a page or layout. They're really useful when you need to repeat certain chunks of code throughout your pages, or to keep individual files from getting too cluttered with HTML.Lorem ipusm Partials are a feature of Handlebars which allow you to inject HTML anywhere in a page or layout. They're really useful when you need to repeat certain chunks of code throughout your pages, or to keep individual files from getting too cluttered with HTML.Lorem ipusm Partials are a feature of Handlebars which allow you to inject HTML anywhere in a page or layout. They're really useful when you need to repeat certain chunks of code throughout your pages, or to keep individual files from getting too cluttered with HTML.</p>
+        <a href="#" class="hollow button primary" title="Read More">Read More</a>
+    </div>
+    <div class="film-featured-img text-center medium-text-right">
+        <figure>
+            <img src="{{root}}/assets/img/short-film.jpg" alt="Short Film">
+        </figure>
+        <div class="film-trivia">
+            <h3 class="subheader">Did you know?</h3>
+            <p>Lorem ipusm Partials are a feature of Handlebars</p>
+        </div>
+    </div>
+</section>
+<!-- /Synopsis -->
+<section class="film-crew-block">
+    <div class="child row section-meta text-center">
+        <h5>Section</h5>
+    </div>
+    <div class="film-crew">
+        <h5>Lorem ipsum</h5>
+        <small>Lsljasdkj</small>
+    </div>
+    <div class="film-crew">
+        <h5>Lorem ipsum</h5>
+        <small>Lsljasdkj</small>
+    </div>
+    <div class="film-crew">
+        <h5>Lorem ipsum</h5>
+        <small>Lsljasdkj</small>
+    </div>
+</section>
+<!-- /Film Details -->
+
+<section class="row film-gallery">
+    <div class="section-meta text-center">
+        <h5>Section</h5>
+    </div>
+    
+    <div class="small-up-1 medium-up-3 large-up-4 text-center">
+        {{#repeat 4}}
+        <div class="column">
+        <div class="card">
+            <img src="assets/img/2.jpg">
+            <div class="card-section">
+                <a href="#" class="hollow button warning" title="details">Details</a>
+            </div>
+        </div>
+        </div>
+        {{/repeat}}
+    </div>
+</section>
+<!-- /film-gallery -->
+
+<section class="row film-awards">
+    <div class="section-meta text-center">
+        <h5>Section</h5>   
+    </div>
+    
+    <div class="small-up-1 medium-up-3 large-up-4 text-center">
+        {{#repeat 4}}
+        <div class="column">
+        <div class="card">
+            <img src="assets/img/2.jpg">
+            <div class="card-section">
+                <a href="#" class="hollow button warning" title="details">Details</a>
+            </div>
+        </div>
+        </div>
+        {{/repeat}}
+    </div>
+</section>
+<!-- /film-awards -->

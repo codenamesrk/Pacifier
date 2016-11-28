@@ -1,0 +1,107 @@
+/**
+ * Stylesheet
+ */
+//  Table of Contents:
+//
+//   1. Global
+//   2. Home
+//   3. Profile
+//   4. Films
+//   5. Media Room
+//   6. Downloads
+//   7. Reach Out
+
+@import 'app';
+
+// 1. Global
+// ---------
+@import 'components/global';
+
+// Navigation
+// -----------
+
+header{
+	position: relative;
+}
+.title-bar-wrap, .title-bar, .top-bar{
+	width:100%;
+}
+.title-bar-wrap, .top-bar{
+	position: absolute;
+	z-index: 111;
+}
+.top-bar{
+	padding: 0 $topbar-hpadding;
+	border-bottom: $topbar-border;
+}
+.top-bar ul{ 
+	background: none;
+	li { 
+		padding-bottom: $topbar-menu-padding;
+		&:hover{
+			border-bottom: 1px solid $site-color;
+		}
+	}
+}
+.top-bar-left{
+	padding-top: $topbar-vpadding;
+}
+.top-bar-right{
+	padding-top: $topbar-menu-padding;
+	text-transform: uppercase;
+}
+// 2. Home
+// ---------
+
+// Frontpage Slider
+// -----------------
+.featured-movie-info {
+	position: absolute;
+	left: 0;
+	bottom: 0; //test
+	width: 100%;	
+	color: $white;
+	background: $dark-transparent; //test
+	h6{ font-size: rem-calc(18); margin-bottom:0; }
+	p,a{ font-size: rem-calc(14); }	
+	@include breakpoint(medium){
+		padding: 0 $topbar-hpadding; 
+	}
+}
+.featured-movie-info-wrap{
+	padding: $topbar-hpadding 0;
+	border-bottom: 8px solid $site-color;
+}
+.orbit-bullets{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 200px;
+}
+
+// 3. Profile
+// ---------
+
+// 4. Films
+// ---------
+.film-synopsis-block,.film-crew-block{
+	@include grid-row;
+}
+.film-synopsis, .film-featured-img{
+	@include breakpoint(medium){
+		@include grid-column(6);	
+	}	
+}
+.film-crew{
+	@include breakpoint(medium){
+		@include grid-column(4);	
+	}	
+}
+// 5. Media Room
+// ---------
+
+// 6. Downloads
+// ---------
+
+// 7. Reach Out
+// ---------

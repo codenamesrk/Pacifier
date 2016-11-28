@@ -1,0 +1,92 @@
+// Global Styles
+// ----------------
+.body{
+	background: $white;	
+}
+p{
+	font-family: $paragraph-font-family;
+}
+figure{
+	margin: 0;
+}
+figure.lm{
+	margin-left: rem-calc(75);
+}
+figure.rm{
+	margin-right: rem-calc(75);
+}
+.wrap{
+ 	width: 100%;
+ 	max-width: $global-width;
+ 	margin: 0 auto;
+}
+.inner-wrap{
+	padding: $global-innerwrap;
+}
+.mobile-wrap{
+	padding: 0 $global-padding;
+	@include breakpoint(medium){
+		padding:0;
+	}
+}
+// Movie meta boxes
+.box{
+	display: inline-block;
+    padding: 0.34rem 0.5rem;
+    font-size: rem-calc(12);
+    line-height: 1;
+    white-space: nowrap;
+    cursor: default;
+    text-transform: uppercase;
+}
+.movie-genre-block,.movie-lang{
+	margin-right:20px;
+}
+.movie-lang{
+	background: $white;
+    color: $black;
+}
+.movie-genre-block{
+	display: inline-block;
+}
+.movie-genre{
+	color: $white;
+}
+// Section blocks
+section.row{
+	padding-top: $section-padding/2;
+	padding-bottom: $section-padding/2;
+	@include breakpoint(medium){
+		padding-top: $section-padding;
+		padding-bottom: $section-padding;
+	}
+}
+section.alt{
+	background-color: $section-alt-color;
+}
+section.newsletter{
+	background: url(/assets/img/newsletter-bg.jpg) center center no-repeat;
+	background-size: cover;
+}
+section.row.lp{
+	@include breakpoint(medium){
+		padding: $section-padding 0 $section-padding 70px;
+	}
+}
+section.row.rp{
+	@include breakpoint(medium){
+		padding: $section-padding 70px $section-padding 0;
+	}
+}
+section .meta{
+	h6{ text-transform: uppercase; }
+}
+//footer
+footer.row{
+	padding-top: $section-padding/4;
+	padding-bottom: $section-padding/4;
+	@include breakpoint(medium){
+		padding-top: $section-padding/2;
+		padding-bottom: $section-padding/2;
+	}	
+}
