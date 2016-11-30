@@ -68,6 +68,10 @@ header{
 		padding: 0 $topbar-hpadding; 
 	}
 }
+.featured-movie-info.single{
+	padding-top: $topbar-hpadding/2;
+	padding-bottom: $topbar-hpadding/2;
+}
 .featured-movie-info-wrap{
 	padding: $topbar-hpadding 0;
 	border-bottom: 8px solid $site-color;
@@ -84,18 +88,41 @@ header{
 
 // 4. Films
 // ---------
-.film-synopsis-block,.film-crew-block{
-	@include grid-row;
+.film-synopsis{
+	margin-top:2rem;
+	&:first-letter{
+		font-size: 40px;
+	    font-weight: bold;
+	    float: left;
+	    vertical-align: middle;
+	    margin: 0 20px 0 0;
+	}
 }
-.film-synopsis, .film-featured-img{
-	@include breakpoint(medium){
-		@include grid-column(6);	
-	}	
+.film-trivia{
+	padding: 2rem;
+	float: right;
+	max-width: 350px;
+	h5{ color: $site-color; }
 }
 .film-crew{
-	@include breakpoint(medium){
-		@include grid-column(4);	
-	}	
+	h6{ 
+		text-transform:uppercase; 
+		font-weight:bold;
+		font-size: 90%;
+	}
+	.column{
+		@include breakpoint(medium){
+			padding-right: 2rem;
+		}
+		&:nth-child(2){
+			@include breakpoint(medium){
+				padding-left: 2rem;
+			}
+		}
+	}
+}
+.member{	
+	margin-bottom: 2rem;
 }
 // 5. Media Room
 // ---------

@@ -29,6 +29,14 @@ figure.rm{
 		padding:0;
 	}
 }
+.v-center-wrap{
+	display: table;
+}
+.v-center{
+	float:none !important;
+	display:table-cell;
+	vertical-align:middle;
+}
 // Movie meta boxes
 .box{
 	display: inline-block;
@@ -68,6 +76,12 @@ section.newsletter{
 	background: url(/assets/img/newsletter-bg.jpg) center center no-repeat;
 	background-size: cover;
 }
+section.row.fp{
+	@include breakpoint(medium){
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+}
 section.row.lp{
 	@include breakpoint(medium){
 		padding: $section-padding 0 $section-padding 70px;
@@ -79,6 +93,7 @@ section.row.rp{
 	}
 }
 section .meta{
+	margin-bottom: $section-padding/2;
 	h6{ text-transform: uppercase; }
 }
 //footer

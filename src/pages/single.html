@@ -1,48 +1,84 @@
 ---
 title: Single
 ---
-{{> header}}
-<section class="film-synopsis-block">
-    <div class="section-meta text-center">
-        <h5>Section</h5>
+<section class="row collapse mobile-wrap intro lp">
+    <div class="meta text-center">
+        <h6>Section</h6>
     </div>
-    <div class="film-synopsis text-center medium-text-justify">        
-        <p>Lorem ipusm Partials are a feature of Handlebars which allow you to inject HTML anywhere in a page or layout. They're really useful when you need to repeat certain chunks of code throughout your pages, or to keep individual files from getting too cluttered with HTML.Lorem ipusm Partials are a feature of Handlebars which allow you to inject HTML anywhere in a page or layout. They're really useful when you need to repeat certain chunks of code throughout your pages, or to keep individual files from getting too cluttered with HTML.Lorem ipusm Partials are a feature of Handlebars which allow you to inject HTML anywhere in a page or layout. They're really useful when you need to repeat certain chunks of code throughout your pages, or to keep individual files from getting too cluttered with HTML.</p>
+    <div class="film-synopsis medium-6 columns medium-text-justify">        
+        <p>Lorem ipusm Partials are a feature of Handlebars which allow you to inject HTML anywhere in a page or layout. They're really useful when you need to repeat certain chunks of code throughout your pages, or to keep individual files from getting too cluttered with HTML.</p>
+        <p>Lorem ipusm Partials are a feature of Handlebars which allow you to inject HTML anywhere in a page or layout. They're really useful when you need to repeat certain chunks of code throughout your pages, or to keep individual files from getting too cluttered with HTML.Lorem ipusm Partials are a feature of Handlebars which allow you to inject HTML anywhere in a page or layout. They're really useful when you need to repeat certain chunks of code throughout your pages, or to keep individual files from getting too cluttered with HTML.</p>
+        <p>Lorem ipusm Partials are a feature of Handlebars which allow you to inject HTML anywhere in a page or layout. They're really useful when you need to repeat certain chunks of code throughout your pages, or to keep individual files from getting too cluttered with HTML.</p>
+        <p>Lorem ipusm Partials are a feature of Handlebars which allow you to inject HTML anywhere in a page or layout. They're really useful when you need to repeat certain chunks of code throughout your pages, or to keep individual files from getting too cluttered with HTML.Lorem ipusm Partials are a feature of Handlebars which allow you to inject HTML anywhere in a page or layout. They're really useful when you need to repeat certain chunks of code throughout your pages, or to keep individual files from getting too cluttered with HTML.</p>
         <a href="#" class="hollow button primary" title="Read More">Read More</a>
     </div>
-    <div class="film-featured-img text-center medium-text-right">
-        <figure>
+    <div class="medium-6 columns text-center clearfix">
+        <figure class="lm">
             <img src="{{root}}/assets/img/short-film.jpg" alt="Short Film">
         </figure>
-        <div class="film-trivia">
-            <h3 class="subheader">Did you know?</h3>
+        <div class="film-trivia hide-for-small text-right">
+            <h5 class="subheader">Did you know?</h5>
             <p>Lorem ipusm Partials are a feature of Handlebars</p>
         </div>
     </div>
 </section>
 <!-- /Synopsis -->
-<section class="film-crew-block">
-    <div class="child row section-meta text-center">
-        <h5>Section</h5>
+<section class="row collapse fp alt mobile-wrap">
+    <div class="meta text-center">
+        <h6>Section</h6>
     </div>
-    <div class="film-crew">
-        <h5>Lorem ipsum</h5>
-        <small>Lsljasdkj</small>
-    </div>
-    <div class="film-crew">
-        <h5>Lorem ipsum</h5>
-        <small>Lsljasdkj</small>
-    </div>
-    <div class="film-crew">
-        <h5>Lorem ipsum</h5>
-        <small>Lsljasdkj</small>
+    <div class="film-crew small-up-1 medium-up-3">
+    {{#each single-movie}}
+        <div class="column">
+            <div class="member">
+                <h6>cast</h6>
+                <p>
+                {{#each cast}}
+                {{this}}
+                {{/each}}
+                </p>
+            </div>
+            <div class="member">
+                <h6>producer</h6>
+                <p>{{producer}}</p>
+            </div>            
+        </div>
+        <div class="column">
+            <div class="member">
+                <h6>Director</h6>
+                <p>{{director}}</p>
+            </div>
+            <div class="member">
+                <h6>Story / Writer</h6>
+                <p>{{writer}}</p>
+            </div>
+            <div class="member">
+                <h6>cinematographer</h6>
+                <p>{{camera}}</p>
+            </div>                        
+        </div>
+        <div class="column">
+            <div class="member">
+                <h6>Music / Background Score</h6>
+                <p>{{music}}</p>
+            </div>
+            <div class="member">
+                <h6>Lyrics</h6>
+                <p>{{lyrics}}</p>
+            </div>
+            <div class="member">
+                <h6>Editor</h6>
+                <p>{{editor}}</p>
+            </div> 
+        </div> 
+    {{/each}}       
     </div>
 </section>
 <!-- /Film Details -->
 
-<section class="row film-gallery">
-    <div class="section-meta text-center">
-        <h5>Section</h5>
+<section class="row collapse fp film-gallery mobile-wrap">
+    <div class="meta text-center">
+        <h6>Gallery</h6>
     </div>
     
     <div class="small-up-1 medium-up-3 large-up-4 text-center">
@@ -60,20 +96,17 @@ title: Single
 </section>
 <!-- /film-gallery -->
 
-<section class="row film-awards">
-    <div class="section-meta text-center">
-        <h5>Section</h5>   
+<section class="row collapse fp alt film-awards mobile-wrap">
+    <div class="meta text-center">
+        <h6>Awards</h6>   
     </div>
     
-    <div class="small-up-1 medium-up-3 large-up-4 text-center">
+    <div class="small-up-1 medium-up-2 large-up-4 text-center">
         {{#repeat 4}}
         <div class="column">
-        <div class="card">
-            <img src="assets/img/2.jpg">
-            <div class="card-section">
-                <a href="#" class="hollow button warning" title="details">Details</a>
+            <div class="member">
+                <img src="assets/img/win-ofc.png">
             </div>
-        </div>
         </div>
         {{/repeat}}
     </div>

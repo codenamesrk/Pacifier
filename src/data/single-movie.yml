@@ -3,6 +3,26 @@
   title: Foundation 2
   description: Documentation for Foundation 2.2.1
   link: 'assets/img/short-film.jpg'
+  language: malayalam
   genre:
     - drama
     - action
+  cast:
+    - Mammootty
+    - Sumalatha
+    - Thiagarajan
+    - Urvashi
+    - Suresh Gopi
+    - Devan
+    - Jagannatha Varma
+    - Pratapa Chandran
+    - Vijayaraghavan
+    - Siddique
+    - Mohan Jose
+  director: Joshiy
+  producer: Joy Thomas
+  writer: Dennis Joseph
+  camera: Jayanan Vincent
+  music: Shyam
+  lyrics: Shibhu Chakravarthy
+  editor: K.Sankunny
