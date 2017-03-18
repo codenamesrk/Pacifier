@@ -6,15 +6,24 @@
 p{
 	font-family: $paragraph-font-family;
 }
+// Figures
 figure{
 	margin: 0;
 }
 figure.lm{
-	margin-left: rem-calc(75);
+	@include margin('left');
 }
 figure.rm{
-	margin-right: rem-calc(75);
+	@include margin('right');
 }
+figure.rm.small{
+	position: relative;
+	@include breakpoint(medium){
+		top:-30px;
+		margin-right: rem-calc(50);	
+	}
+}
+// Display
 .wrap{
  	width: 100%;
  	max-width: $global-width;
@@ -30,12 +39,48 @@ figure.rm{
 	}
 }
 .v-center-wrap{
-	display: table;
+	@include breakpoint(medium){
+		display: table;
+	}
 }
 .v-center{
-	float:none !important;
-	display:table-cell;
-	vertical-align:middle;
+	@include breakpoint(medium){
+		float:none !important;
+		display:table-cell;
+		vertical-align:middle;
+	}
+}
+.highlt-lt{
+	margin-bottom: $global-padding;
+	h6{
+		text-transform: uppercase;
+	}
+}
+.highlt-rt{	
+	@include breakpoint(large){
+		margin-top: $section-padding/2;
+		font-size: 1.2rem;
+		color: $site-color;
+	}
+}
+// Typography
+.fl-big{
+	&:first-letter{
+		font-size: 40px;
+	    font-weight: bold;
+	    float: left;
+	    vertical-align: middle;
+	    margin: 0 20px 0 0;
+	}
+}
+blockquote.lm{
+	@include margin('left');
+}
+// Floating Buttons
+.floating-buttons{
+	position: absolute;
+	left: 0;
+	top: -19px;
 }
 // Movie meta boxes
 .box{
@@ -45,7 +90,15 @@ figure.rm{
     line-height: 1;
     white-space: nowrap;
     cursor: default;
-    text-transform: uppercase;
+    text-transform: uppercase;   
+}
+.column > div .box {
+	&:first-child{
+    	padding-left:0;
+    }
+    &:last-child{
+    	padding-right:0;
+    } 
 }
 .movie-genre-block,.movie-lang{
 	margin-right:20px;
@@ -53,6 +106,19 @@ figure.rm{
 .movie-lang{
 	background: $white;
     color: $black;
+    &:last-child { margin-right: 0; }  
+}
+.mobile-lang {
+	position: relative;	
+	.movie-lang{
+		position: absolute;
+		bottom:0;
+		right: 0;
+		@include breakpoint(medium){
+			position: relative;
+		}
+	}
+
 }
 .movie-genre-block{
 	display: inline-block;
@@ -62,6 +128,7 @@ figure.rm{
 }
 // Section blocks
 section.row{
+	position: relative;
 	padding-top: $section-padding/2;
 	padding-bottom: $section-padding/2;
 	@include breakpoint(medium){
@@ -78,19 +145,32 @@ section.newsletter{
 }
 section.row.fp{
 	@include breakpoint(medium){
-		padding-left: 70px;
-		padding-right: 70px;
+		padding-left: rem-calc(50);
+		padding-right: rem-calc(50);
+	}	
+	@include breakpoint(large){
+		padding-left: rem-calc(70);
+		padding-right: rem-calc(70);
 	}
 }
 section.row.lp{
 	@include breakpoint(medium){
-		padding: $section-padding 0 $section-padding 70px;
+		padding: ($section-padding - 30) 0 ($section-padding - 30) rem-calc(50);
+	}
+	@include breakpoint(large){
+		padding: $section-padding 0 $section-padding rem-calc(70);
 	}
 }
 section.row.rp{
 	@include breakpoint(medium){
-		padding: $section-padding 70px $section-padding 0;
+		padding: ($section-padding - 30) rem-calc(50) ($section-padding - 30) 0;
+	}	
+	@include breakpoint(large){
+		padding: $section-padding rem-calc(70) $section-padding 0;
 	}
+}
+section.row.no-tp{
+	padding-top:0;
 }
 section .meta{
 	margin-bottom: $section-padding/2;

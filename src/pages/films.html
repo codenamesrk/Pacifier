@@ -1,0 +1,46 @@
+---
+title: Films
+---
+<section class="row collapse mobile-wrap fp">
+    <div class="meta text-center">
+        <div class="button-group">
+        	<a class="button">A-Z</a>
+        	<a class="button">Z-A</a>
+        	<a class="button">year up</a>
+        	<a class="button">year down</a>
+        </div>
+    </div>
+    <div class="film-grid small-up-1 medium-up-3 large-up-4 text-center">
+        {{#repeat 8}}
+        <div class="column">
+        <div class="card">
+            <img src="assets/img/2.jpg">
+            <div class="card-section">
+                <a href="single.html" class="hollow button warning" title="details">Details</a>
+            </div>
+        </div>
+        </div>
+        {{/repeat}}
+    </div>
+</section>
+<!-- /Films -->
+<section class="row collapse alt fp film-gallery mobile-wrap">
+    <div class="meta text-center">
+        <h6>coming soon</h6>
+        <h3>Films soon to hit theatres near you</h3>
+    </div>
+    
+    <div class="small-up-1 medium-up-3 large-up-4 text-center">
+        {{#repeat 4}}
+        <div class="column">
+        <div class="card">
+            <img src="assets/img/2.jpg">
+            <div class="card-section">
+                <a href="#" class="hollow button warning" title="details">Details</a>
+            </div>
+        </div>
+        </div>
+        {{/repeat}}
+    </div>
+</section>
+<!-- /film-gallery -->

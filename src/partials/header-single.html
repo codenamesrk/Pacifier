@@ -1,18 +1,20 @@
-<header style="height:460px; background:url(assets/img/short-film.jpg)">
+<header class="single" style="background:url(assets/img/short-film.jpg)">
 	
-	<div class="featured-movie-info single collapse mobile-wrap small-up-2 medium-up-3 v-center-wrap" data-equalizer data-equalize-on="medium">
+	<div class="featured-movie-info single collapse mobile-wrap small-up-2 v-center-wrap" data-equalizer data-equalize-on="small">
 		{{#each single-movie}}
-		<div class="column text-left v-center" data-equalizer-watch>			
-			<h6 class="movie-year">{{year}}</h6>
-			<h3 class="movie-title">{{title}}</h3>
+		<div class="column text-left v-center" data-equalizer-watch>
+			<div>
+				<h6 class="movie-year">{{year}}</h6>
+				<h3 class="movie-title">{{title}}</h3>							
+			</div>			
+			<div>
 			{{#each genre}}	
-			<span class="box movie-genre">{{this}}</span>
-			{{/each}}					
+				<span class="box movie-genre">{{this}}</span>			
+			{{/each}}
+			</div>						
 		</div>
-		<div class="column text-center v-center" data-equalizer-watch>
-			<a href="#" class="box" title="Play Trailer">play trailer</a>
-		</div>
-		<div class="column text-right v-center" data-equalizer-watch>
+
+		<div class="column mobile-lang text-right v-center" data-equalizer-watch>
 			<span class="box movie-lang">{{language}}</span>
 		</div>
 		{{/each}}

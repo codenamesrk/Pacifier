@@ -1,0 +1,19 @@
+// Mixins
+// ----------------
+
+// Text Justify Paragraph
+@mixin typo-para{
+	line-height: 1.8rem;
+	margin-bottom: 3rem; 
+	text-align: justify;
+}
+
+// Global Margin elements
+@mixin margin($direction){
+	@include breakpoint(medium){
+		margin-#{$direction}: rem-calc(50);	
+	}	
+	@include breakpoint(large){
+		margin-#{$direction}: rem-calc(75);	
+	}
+}

@@ -3,6 +3,7 @@
  */
 //  Table of Contents:
 //
+//	 0. Mixins
 //   1. Global
 //   2. Home
 //   3. Profile
@@ -12,6 +13,9 @@
 //   7. Reach Out
 
 @import 'app';
+// 0. Mixins
+// ----------
+@import 'components/mixins';
 
 // 1. Global
 // ---------
@@ -22,6 +26,18 @@
 
 header{
 	position: relative;
+}
+header.single{
+	height: 250px;
+	@include breakpoint(medium){
+		height: 460px;
+	}
+}
+header.page{
+	height: 250px;
+	@include breakpoint(medium){
+		height: 460px;
+	}
 }
 .title-bar-wrap, .title-bar, .top-bar{
 	width:100%;
@@ -85,18 +101,66 @@ header{
 
 // 3. Profile
 // ---------
-
+.profile {
+	p {	
+		@include breakpoint(medium){
+			@include typo-para;
+		}
+	}	
+	.intro {
+		@include breakpoint(medium){
+			padding: 0 40px !important;
+		}
+	}
+	.intro-body{
+		@include breakpoint(large){
+			padding-left:20px !important;
+		}
+	}
+	.intro,.intro-body{
+		p:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+.pic-col{
+	margin-bottom: rem-calc(50);
+	@include breakpoint(large){
+		margin-bottom: 0;
+	}
+}
+.leadership {
+	p {
+		@include typo-para;
+	}
+	blockquote{
+		margin-top: rem-calc(37);
+	}
+}
 // 4. Films
 // ---------
+.film-grid .column{
+	margin-bottom: 3rem;
+}
+.card {
+	position: relative;
+	.card-section{
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 50%;
+	}
+}
+// Single Film
 .film-synopsis{
 	margin-top:2rem;
-	&:first-letter{
-		font-size: 40px;
-	    font-weight: bold;
-	    float: left;
-	    vertical-align: middle;
-	    margin: 0 20px 0 0;
-	}
+	// &:first-letter{
+	// 	font-size: 40px;
+	//     font-weight: bold;
+	//     float: left;
+	//     vertical-align: middle;
+	//     margin: 0 20px 0 0;
+	// }
 }
 .film-trivia{
 	padding: 2rem;
@@ -124,6 +188,7 @@ header{
 .member{	
 	margin-bottom: 2rem;
 }
+
 // 5. Media Room
 // ---------
 
